@@ -1,4 +1,6 @@
-kubectl apply -f deployment.yml
-kubectl apply -f service.yml
-kubectl apply -f configmap.yml
-kubectl apply -f hpa.yml
+Commands
+
+kubectl apply -f deployment.yml \n
+kubectl apply -f service.yml \n
+kubectl apply -f configmap.yml \n
+kubectl apply -f hpa.yml \n

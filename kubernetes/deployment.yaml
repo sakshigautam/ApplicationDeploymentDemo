@@ -17,3 +17,4 @@ apiVersion: apps/v1
           image: my-app:v1
           ports:
           - containerPort: 8080
+         imagePullsecrets: myapp-secrets

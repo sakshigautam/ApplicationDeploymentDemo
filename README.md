@@ -20,6 +20,10 @@ key value pair : code might need some values to be passed , which are not sensit
 
 deployment : configmap and set them in env
 
+Inject all configMapRef as a environment variable
+Pick specific keys
+Mount as a volume
+
 Secrets:
 storing sensitive information. code needs secrets , env
 

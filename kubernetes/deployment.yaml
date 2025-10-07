@@ -19,6 +19,33 @@ apiVersion: apps/v1
           - containerPort: 8080
          imagePullsecrets: myapp-secrets
 
+ envFrom:
+   - configMapRef:
+       name: my-app-config
+
  env:
-  value:
+   - name: APP_ENV
+      valueFrom:
+        configMapRef:
+          name:my-app-config
+          key:APP_ENV
+
+   - name: LABEL
+      valueFrom:
+        configMapRef:
+          name:my-app-config
+          key:APP_LABEL
+
+volumeMounts:
+  - name: config-volume
+    mountPath: /etc/config
+  
+
+volume:
+  - name: config-volume
+    configMap:
+      name: my-app-config
+       
+
+   
    
